@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="banner">
+                <img src="{% static 'img/fondo.jpeg' %}" alt="Banner" class="banner-img">
+                <img src="{% static 'img/perfil.jpeg' %}" alt="Samuel Briones" class="profile-pic">
+            </div>
+            <div class="profile-section">
+                <h1>Samuel Briones<span class="emoji">🦊</span></h1> 
+                <a href="https://github.com/Samuelbriones" class="follow-btn">Seguir</a>
+                <p class="tagline">¡Dando vida a las ideas con código! ✨</p>
+                <p class="bio">Estudiante de la Universidad Estatal de Milagro (UNEMI), sigo la carrera de Ingeniería en software</p>
+                <div class="profile-details">
+                    <span>Título Profesional</span>
+                    <span><a href="/links">🔗 link </a></span>
+                    <span>🍰 23 de Enero</span>
+                    <span>📅 Se unió en enero de 2024</span>
+                    <span>📍 Milagro, Ecuador</span>
+                    <div class="profile-details">
+                        <span>📧 Contactar: <a href="mailto:samuelbriones558@gmail.com" class="contact-link">samuelbriones558@gmail.com</a></span>
+                        <span>📄 Descargar: <a href="/cv" class="cv-link"> Hoja de vida</a></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <nav class="tabs">
+                <ul>
+                    <li class="{% if request.path == '/' %}active{% endif %}"><a href="{% url 'main:index' %}" >Inicio</a></li>
+                    <li class="{% if request.path == '/about/' %}active{% endif %}"><a  href="{% url 'main:about' %}">Acerca de mi</a></li>
+                    <li class="{% if request.path == '/content/' %}active{% endif %}"><a href= "{% url 'main:content'%}">Contenido</a></li>
+                    <li class="{% if request.path == '/books/' %}active{% endif %}"><a href = "{% url 'main:books'%}" >Libros</a></li>
+                </ul>
+            </nav>
+
+            {% block content %}
+            <section class="intro">
+                <h2>Ingeniería en Software</h2>
+                <p>La Ingeniería en Software es una disciplina que se encarga del desarrollo, diseño, mantenimiento y gestión de sistemas de software de alta calidad. Como ingeniero de software, te dedicas a la construcción de soluciones tecnológicas que cumplen con los requisitos y expectativas de los usuarios, utilizando principios y metodologías ágiles para asegurar la eficiencia y escalabilidad del software.</p>
+            </section>
+
+            <section class="portfolio">
+                <h2>Mi Portafolio</h2>
+                <div class="portfolio-gallery">
+                    <div class="portfolio-item">
+                        <img src="{% static 'img/proyecto1.jpeg' %}" alt="Proyecto 1">
+                        <p>Descripción breve del Proyecto 1.</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="{% static 'img/proyecto2.jpeg' %}" alt="Proyecto 2">
+                        <p>Descripción breve del Proyecto 2.</p>
+                    </div>
+                </div>
+            </section>
+            {% endblock %}
+        </main>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

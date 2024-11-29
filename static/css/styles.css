@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #15202B;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #192734;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.banner {
+    width: 100%;
+    height: 150px;
+    background-color: #1DA1F2;
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #15202B;
+    position: absolute;
+    bottom: -50px;
+    left: calc(50% - 50px);
+}
+
+.profile-section {
+    padding: 60px 20px 20px;
+    text-align: center;
+}
+
+.profile-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-section .emoji {
+    margin-left: 8px;
+}
+
+.follow-btn {
+    background-color: #1DA1F2;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.follow-btn img {
+    margin-left: 8px;
+    width: 18px;
+    height: 18px;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #8899A6;
+    margin: 10px 0;
+}
+
+.bio {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.profile-details {
+    font-size: 14px;
+    color: #8899A6;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-details span {
+    display: flex;
+    align-items: center;
+}
+
+.profile-details img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.subscribe {
+    padding: 20px;
+    text-align: center;
+}
+
+.subscribe h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.subscribe form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.subscribe input[type="email"] {
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    outline: none;
+    width: 70%;
+    max-width: 300px;
+}
+
+.subscribe button[type="submit"] {
+    background-color: #E0245E;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.subscribe p {
+    font-size: 12px;
+    color: #8899A6;
+}
+
+.tabs {
+    border-top: 1px solid #38444D;
+    padding: 10px 0;
+}
+
+.tabs ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.tabs ul li {
+    width: 100%;
+}
+
+.tabs ul li a {
+    color: #8899A6;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+
+.tabs ul li.active a {
+    color: #1DA1F2;
+    border-bottom: 2px solid #1DA1F2;
+}
+
+.contact-link, .cv-link {
+    color: inherit; /* Mantiene el color del texto normal */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-weight: normal; /* Opcional: Cambia el peso de la fuente */
+}
+
+/* Opcional: Ajusta el estilo de los enlaces para que coincidan con el estilo general */
+.contact-link:hover, .cv-link:hover {
+    color: #007bff; /* Cambia el color al pasar el cursor (personaliza según tu paleta de colores) */
+}
